@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {% endblock title %}
+{% block content %}
+
+
+
+<!-- site-main -->
+<div id="main" class="site-main">
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main">
+
+            <!-- layout-medium -->
+            <div class="layout-medium">
+
+                <!-- .entry-header -->
+                <header class="entry-header">
+
+                    <h1 class="entry-title">Outdoor Adventures</h1>
+
+                    <!-- HEADER LINKS -->
+                    <ul class="header-links">
+                        <li><a href="{% url 'gallery-page' %}"><i class="pw-icon-level-up"></i> Back to Gallery</a></li>
+                    </ul>
+                    <!-- HEADER LINKS -->
+
+                </header>
+                <!-- .entry-header -->
+
+
+                <!-- rg-gallery -->
+                <div id="rg-gallery" class="rg-gallery">
+
+                    <div class="rg-image-wrapper">
+                        <div class="rg-image" style="min-height: 407px;"><img src="{{ gallery.image.url }}"></div>
+                        <div class="rg-loading" style="display: none;"></div>
+                        <div class="rg-caption-wrapper">
+                            <div class="rg-caption">
+                                <p>{{ gallery.title }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- rg-gallery -->
+
+            </div>
+            <!-- layout-medium -->
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+
+</div>
+<!-- site-main -->
+
+{% endblock content %}

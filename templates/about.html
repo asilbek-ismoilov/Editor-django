@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {% endblock title %}
+{% block content %}     
+
+    <!-- site-main -->
+    <div id="main" class="site-main">
+        <!-- primary -->
+        <div id="primary" class="content-area">
+            <!-- site-content -->
+            <div id="content" class="site-content" role="main">
+                <!-- layout-medium -->
+                <div class="layout-medium">
+                    <!-- .hentry -->
+                    <article class="hentry page">
+                        <!-- .entry-header -->   
+                        <header class="entry-header">
+                            <h1 class="entry-title">About Me</h1>
+                        </header>
+                        <!-- .entry-header -->   
+                        <!-- .entry-content -->
+                        <div class="entry-content">
+                            {% for about in abouts %}
+                            <p>
+                                <img src="{{ about.image.url }} " alt="profile photo">
+                            </p>
+                            <h2 class="section-title center">WHO IS THIS GUY?</h2>
+                            <p>{{ about.content }}</p>
+                            {% endfor %}
+                            <h2 class="section-title center">FUN FACT</h2>
+                            <!-- row -->
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

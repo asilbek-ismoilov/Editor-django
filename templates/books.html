@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {% endblock title %}
+{% block content %}
+
+
+<!-- site-main -->
+<div id="main" class="site-main">
+
+    <!-- primary -->
+    <div id="primary" class="content-area">
+
+        <!-- site-content -->
+        <div id="content" class="site-content" role="main">
+
+            <!-- InstanceBeginEditable name="FeaturedContent" -->
+
+            <!-- InstanceEndEditable -->
+            <!-- layout-medium -->
+            <div class="layout-medium">
+
+                <!-- InstanceBeginEditable name="LayoutMediumContent" -->
+
+                <!-- entry-header -->
+                <header class="entry-header">
+
+                    <h1 class="entry-title">Books</h1>
+
+                </header>
+                <!-- entry-header -->
+
+                <!-- bookshelf -->
+                <div class="bookshelf">
+
+                    <!-- book -->
+                    {% for book in books %}
+                    <figure>
+                        <div class="perspective">
+                            <div class="book">
+                                <div class="cover">
+                                    <div class="spine">
+                                        <img src="{{ book.spine_image.url }}" alt="book" />
+                                    </div>
+                                    <div class="front">
+                                        <img src="{{ book.cover_image.url }}" alt="book" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a class="open-details" href="#">Details</a>
+                            <a href="#">Buy</a>
+                        </div>
+                        <figcaption>
+                            <h2>{{ book.title }}<span>{{ book.name }}</span></h2>
+                        </figcaption>
+                        <div class="details">
+                            <ul>
+                                <li>{{ book.about }}</li>
+                                <li>{{ book.by_name }}</li>
+                                <li>{{ book.data }}</li>
+                                <li>{{ book.pages }}</li>
+                            </ul>
+                            <span class="close-details">X</span>
+                        </div>
+                    </figure>
+                    {% endfor %}
+                    <!-- book -->
+
+                </div>
+                <!-- bookshelf -->
+
+                <!-- InstanceEndEditable -->
+
+            </div>
+            <!-- layout-medium -->
+
+        </div>
+        <!-- site-content -->
+
+    </div>
+    <!-- primary -->
+
+</div>
+<!-- site-main -->
+
+{% endblock content %}

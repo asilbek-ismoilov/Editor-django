@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {% endblock title %}
+{% block content %}     
+        
+        
+        
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        
+        
+        
+        	            
+            <!-- primary -->
+        	<div id="primary" class="content-area">
+            	
+                <!-- site-content -->
+                <div id="content" class="site-content" role="main">
+                
+                
+                
+				
+				
+					<!-- InstanceBeginEditable name="FeaturedContent" -->
+					
+                    
+                    
+                    <!-- post-slider -->
+                    <!--<div class="post-slider owl-carousel" data-items="3" data-loop="false" data-center="false" data-mouse-drag="true" data-nav="false" data-dots="false" data-autoplay="true" data-autoplay-speed="600" data-autoplay-timeout="2000">-->
+                    <div class="post-slider owl-carousel" data-items="3" data-loop="true" data-dots="false" data-nav="true" data-nav-prev-text="prev" data-nav-next-text="next">
+                    	
+                        <!-- post -->
+                        {% for silde in slides%}
+                    	<div class="post-thumbnail" style="background-image:url({{ silde.image.url }})">
+                                
+                            <!-- .entry-header -->
+                            <header class="entry-header">
+                                
+                                <!-- .entry-meta -->
+                                <div class="entry-meta">
+                                    <span class="cat-links">
+                                        <a href="#" rel="category tag">{{ silde.name }}</a>
+                                    </span>	
+                                </div>
+                                <!-- .entry-meta -->
+                                
+                                <!-- .entry-title -->
+                                <h1 class="entry-title"><a href="{% url 'blog-page' %}"></a>{{ silde.tilte }}</h1>
+                            </header>
+                            <!-- .entry-header -->
+                            
+                        </div>
+                        {% endfor %}
+                        <!-- post -->    
+                            
+                    </div>
+                    <!-- post-slider -->
+                    
+                    
+                    
+					
+					<!-- InstanceEndEditable -->
+                	
+                    
+                    
+                    <!-- layout-fixed -->
+                	<div class="layout-fixed">
+                    
+                    
+                    
+						<!-- InstanceBeginEditable name="LayoutFixedContent" -->
+                
+                	
+                        <!-- blog-regular -->
+                        <div class="blog-regular">
+       
+                            <!-- .hentry -->
+                            <article class="hentry post format-aside">
+                                <div class="entry-content">
+                                    <br>
+                                    <br>
+                                    <h4>A Story About Nothing</h4>
+                                    <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.
+                                    </p>
+                               
+                                    
+                                </div>
+                                
+                            </article>
+                            
+                            
+                            
+                            
+                            
+                    
+                            
+                            
+                        </div>
+                        <!-- blog-regular -->
+                    
+                    
+                
+                		<!-- InstanceEndEditable -->
+                    	
+                        
+                    	
+                    </div>
+                    <!-- layout-fixed -->
+                
+                
+                	
+                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+        {% endblock content %}
+        
