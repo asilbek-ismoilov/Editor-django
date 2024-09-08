@@ -3,8 +3,6 @@
 {% block title %} {% endblock title %}
 {% block content %}
 
-
-
 <!-- site-main -->
 <div id="main" class="site-main">
 
@@ -36,14 +34,15 @@
                 <div id="rg-gallery" class="rg-gallery">
 
                     <div class="rg-image-wrapper">
-                        <div class="rg-image" style="min-height: 407px;"><img src="{{ gallery.image.url }}"></div>
-                        <div class="rg-loading" style="display: none;"></div>
+                        <div class="rg-image" style="min-height: 407px;">
+                            <img src="{{ gallery_item.image.url }}" alt="{{ gallery_item.title }}">
+                        </div>
                         <div class="rg-caption-wrapper">
                             <div class="rg-caption">
-                                <p>{{ gallery.title }}</p>
+                                <p>{{ gallery_item.title }}</p>
                             </div>
                         </div>
-                    </div>
+                    </div>  
 
 
                 </div>
